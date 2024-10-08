@@ -1,4 +1,3 @@
-# trabajo-digital
 # Proyecto de Diseño Web
 
 Este repositorio contiene el proyecto de diseño web que se entrega como parte del curso. El sitio incluye una galería, secciones informativas y un formulario de contacto, todo diseñado con HTML y CSS.
