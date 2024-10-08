@@ -41,8 +41,8 @@ El proyecto consta de los siguientes archivos:
    - Se ha implementado Flexbox para el diseño de la galería y otras secciones del sitio.
 
 10. **Deploy del sitio**:
-    - El sitio ha sido desplegado en [https://nannys-cmd.github.io/trabajo-digital/](#)
-    - El código también está disponible en GitHub en [https://github.com/Nannys-cmd/trabajo-digital.git](#) 
+    - El sitio ha sido desplegado en [Git Pages](https://nannys-cmd.github.io/trabajo-digital/)
+    - El código también está disponible en GitHub en [Repositorio](https://github.com/Nannys-cmd/trabajo-digital.git) 
 
 ## Instalación
 
