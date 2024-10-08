@@ -19,7 +19,7 @@ header {
     width: 100%;
     z-index: 1000;
     background: #2A2A3A; /* Gris medio */
-    color: #FFFFFF; /* Texto blanco en el header */
+    color: #FF1493; /* Texto rosa en el header */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -114,17 +114,37 @@ section {
 }
 
 /* Galería */
+/* Galería */
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 20px;
+    display: flex; /* Usamos flexbox para centrar las imágenes */
+    justify-content: center; /* Centrar horizontalmente */
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten a nuevas líneas */
+    gap: 20px; /* Espacio entre artículos */
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* Centrar la galería en la página */
+}
+
+.gallery article {
+    text-align: center; /* Centrar el texto dentro de los artículos */
+    background: #2A2A3A; /* Fondo gris medio para los artículos */
+    border-radius: 10px;
+    padding: 10px; /* Espacio alrededor de los artículos */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 200px; /* Limitar el ancho de los artículos */
+    flex: 1 1 200px; /* Permitir que se ajusten y crezcan hasta 200px */
 }
 
 .gallery img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%; /* Las imágenes ocupan el 100% del ancho del artículo */
+    height: auto; /* Mantener la proporción de las imágenes */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+}
+
+/* Animación al pasar el mouse sobre los artículos */
+.gallery article:hover {
+    transform: scale(1.05); /* Aumentar un poco el tamaño al pasar el mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer */
