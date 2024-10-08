@@ -42,7 +42,7 @@ El proyecto consta de los siguientes archivos:
 
 10. **Deploy del sitio**:
     - El sitio ha sido desplegado en [enlace de despliegue](#) (agrega el enlace aquí).
-    - El código también está disponible en GitHub en [este repositorio](#) (agrega el enlace aquí).
+    - El código también está disponible en GitHub en [https://github.com/Nannys-cmd/trabajo-digital.git](#) 
 
 ## Instalación
 
