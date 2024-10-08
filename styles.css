@@ -8,8 +8,8 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    color: #f0f0f0;
-    background-color: #000; /* Fondo oscuro */
+    color: #FFFFFF; /* Texto blanco */
+    background-color: #1E1E2F; /* Fondo gris oscuro */
 }
 
 header {
@@ -18,8 +18,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: #333;
-    color: white;
+    background: #2A2A3A; /* Gris medio */
+    color: #FFFFFF; /* Texto blanco en el header */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,24 +42,25 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffcc00;
+    color: #FF1493; /* Rosa intenso para los enlaces */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #fff;
+    color: #FFB6C1; /* Rosa claro al pasar el mouse */
 }
 
 /* Hero Section */
 .hero {
     background: url('images/hero.jpg') no-repeat center center/cover;
-    color: rgb(255, 255, 255);
+    color: #FFFFFF; /* Texto blanco en el hero */
     text-align: center;
     padding: 150px 20px;
     margin-top: 80px; /* Para evitar que se superponga con el header fijo */
-    position: relative;
+    position: relative; /* Aseguramos que el hero esté bien posicionado */
+    z-index: 1;
 }
 
 .hero h1 {
@@ -68,20 +69,20 @@ nav ul li a:hover {
 }
 
 .hero .btn {
-    background: #ffcc00;
-    color: #333;
+    background: #FF1493; /* Rosa intenso para el botón */
+    color: #FFFFFF; /* Texto blanco */
     margin-top: 40px;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s;
-    z-index: 1; /* Aseguramos que el botón esté sobre otros elementos */
-    position: relative; /* Para que respete el flujo del documento */
+    position: relative;
+    z-index: 2;
+    display: inline-block;
 }
 
 .hero .btn:hover {
-    background: #e6b800;
-    color: #fff;
+    background: #C71585; /* Rosa más oscuro al pasar el mouse */
 }
 
 /* Secciones generales */
@@ -91,19 +92,17 @@ section {
 
 /* Servicios */
 .services {
-    display: flex;
-    justify-content: center; /* Alineamos al centro */
-    flex-wrap: wrap; /* Permitimos que se acomoden en varias líneas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre artículos */
     max-width: 1200px;
-    margin: 80px auto; /* Añadimos margen superior para evitar solapamiento con el header */
+    margin: 0 auto;
 }
 
 .services article {
-    width: calc(33.33% - 40px); /* Tres artículos en una fila con margen */
-    background: #1a1a1a;
-    color: #ffcc00;
+    background: #2A2A3A; /* Gris medio para los artículos */
+    color: #FF1493; /* Rosa intenso para el texto de los artículos */
     border-radius: 10px;
-    margin: 10px; /* Añadimos margen para separar los artículos */
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -114,27 +113,61 @@ section {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
 /* Footer */
 footer {
-    background: #111; /* Cambiamos el fondo a un negro profundo */
-    color: #ffcc00; /* El texto en dorado */
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 14px;
-    border-top: 1px solid #ffcc00; /* Añadimos una línea superior */
+    background: #2A2A3A; /* Gris medio para el footer */
+    color: #FFFFFF; /* Texto blanco en el footer */
+    padding: 20px;
+    border-top: 1px solid #FF1493; /* Bordes en rosa intenso */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para manejar el diseño responsivo */
 }
 
 footer p {
-    margin: 10px 0; /* Margen en párrafos */
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 footer .social-icons {
-    margin: 10px 0; /* Margen alrededor de los iconos sociales */
+    display: flex;
+    gap: 15px;
 }
 
+footer .social-icons a {
+    color: #FF1493; /* Rosa intenso para los íconos sociales */
+    font-size: 30px;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #FFB6C1; /* Cambia a rosa claro al pasar el mouse */
+}
+
+footer .social-icons img {
+    width: 30px; /* Tamaño de los iconos */
+    height: 30px;
+}
 /* Formulario de contacto */
 form {
-    background: #1a1a1a;
+    background: #2A2A3A; /* Gris medio para el formulario */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -143,24 +176,25 @@ form {
 }
 
 form label {
-    color: #ffcc00;
+    color: #FF1493; /* Rosa intenso para las etiquetas */
     margin-bottom: 10px;
     display: block;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #333;
-    background: #2a2a2a;
-    color: white;
+    background: #1E1E2F; /* Fondo gris oscuro para inputs */
+    color: #FFFFFF; /* Texto blanco */
     border-radius: 5px;
 }
 
 form button {
-    background: #ffcc00;
-    color: #333;
+    background: #FF1493; /* Rosa intenso para el botón */
+    color: #FFFFFF; /* Texto blanco */
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
@@ -169,18 +203,20 @@ form button {
 }
 
 form button:hover {
-    background: #e6b800;
-    color: white;
+    background: #C71585; /* Rosa más oscuro al pasar el mouse */
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-    .services article {
-        width: 100%; /* Artículos en una sola columna en pantallas pequeñas */
-        margin: 10px 0; /* Reducir el margen en pantallas pequeñas */
+    .services {
+        grid-template-columns: repeat(1, 1fr);
     }
 
-    header {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas pequeñas */
+    }
+
+    footer {
         flex-direction: column;
     }
 
