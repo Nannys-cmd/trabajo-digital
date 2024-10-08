@@ -1,0 +1,191 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #000; /* Fondo oscuro */
+}
+
+header {
+    position: fixed; /* Para mantenerlo fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    height: 80px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 150px 20px;
+    margin-top: 80px; /* Para evitar que se superponga con el header fijo */
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero .btn {
+    background: #ffcc00;
+    color: #333;
+    margin-top: 40px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    z-index: 1; /* Aseguramos que el botón esté sobre otros elementos */
+    position: relative; /* Para que respete el flujo del documento */
+}
+
+.hero .btn:hover {
+    background: #e6b800;
+    color: #fff;
+}
+
+/* Secciones generales */
+section {
+    padding: 40px 20px;
+}
+
+/* Servicios */
+.services {
+    display: flex;
+    justify-content: center; /* Alineamos al centro */
+    flex-wrap: wrap; /* Permitimos que se acomoden en varias líneas */
+    max-width: 1200px;
+    margin: 80px auto; /* Añadimos margen superior para evitar solapamiento con el header */
+}
+
+.services article {
+    width: calc(33.33% - 40px); /* Tres artículos en una fila con margen */
+    background: #1a1a1a;
+    color: #ffcc00;
+    border-radius: 10px;
+    margin: 10px; /* Añadimos margen para separar los artículos */
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.services article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+    background: #111; /* Cambiamos el fondo a un negro profundo */
+    color: #ffcc00; /* El texto en dorado */
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    border-top: 1px solid #ffcc00; /* Añadimos una línea superior */
+}
+
+footer p {
+    margin: 10px 0; /* Margen en párrafos */
+}
+
+footer .social-icons {
+    margin: 10px 0; /* Margen alrededor de los iconos sociales */
+}
+
+/* Formulario de contacto */
+form {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    display: block;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+    background: #2a2a2a;
+    color: white;
+    border-radius: 5px;
+}
+
+form button {
+    background: #ffcc00;
+    color: #333;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #e6b800;
+    color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .services article {
+        width: 100%; /* Artículos en una sola columna en pantallas pequeñas */
+        margin: 10px 0; /* Reducir el margen en pantallas pequeñas */
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
