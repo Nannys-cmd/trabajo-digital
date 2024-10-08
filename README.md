@@ -50,7 +50,7 @@ Para ver el sitio en tu máquina local, sigue estos pasos:
 
 1. Clona este repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/Nannys-cmd/trabajo-digital.git
 2.  Navega al directorio del proyecto:
     cd tu_repositorio
 3.  Abre el archivo `index.html` en tu navegador:
