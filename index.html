@@ -14,7 +14,12 @@
     <header>
         <div class="logo">Trabajo Digital</div>
         <nav>
-            <ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-list">
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#galeria">Galería</a></li>
@@ -22,6 +27,7 @@
             </ul>
         </nav>
     </header>
+
 
     <main>
         <section class="hero">
@@ -64,29 +70,29 @@
             </article>
         </section>
 
-<!-- Sección "Galería" -->
-<section id="galeria">
-    <h2>Galería</h2>
-    <div class="gallery">
-        <article>
-            <h3>Folletos</h3>
-            <img src="images/folletos.jpg" alt="Creación de Folletos">
-        </article>
-        <article>
-            <h3>Logos</h3>
-            <img src="images/logo3.jpeg" alt="Creación de Logos">
-        </article>
-        <article>
-            <h3>Banners</h3>
-            <img src="images/hero.jpg" alt="Creación de Banners">
-        </article>
-        <article>
-            <h3>Historias</h3>
-            <img src="images/Solitude.png" alt="Creación de Historias">
-        </article>
-        <!-- Añade más imágenes según sea necesario -->
-    </div>
-</section>
+        <!-- Sección "Galería" -->
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="gallery">
+                <article>
+                    <h3>Folletos</h3>
+                    <img src="images/folletos.jpg" alt="Creación de Folletos">
+                </article>
+                <article>
+                    <h3>Logos</h3>
+                    <img src="images/logo3.jpeg" alt="Creación de Logos">
+                </article>
+                <article>
+                    <h3>Banners</h3>
+                    <img src="images/hero.jpg" alt="Creación de Banners">
+                </article>
+                <article>
+                    <h3>Historias</h3>
+                    <img src="images/Solitude.png" alt="Creación de Historias">
+                </article>
+                <!-- Añade más imágenes según sea necesario -->
+            </div>
+        </section>
 
 
         <section id="contacto" class="contact">
@@ -107,7 +113,7 @@
     </main>
 
     <footer>
-        <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <p>© 2024 Trabajo Digital. Todos los derechos reservados.</p>
         <div class="social-icons">
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -115,7 +121,15 @@
         </div>
     </footer>
 
-
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+    
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+    
 </body>
 
 </html>

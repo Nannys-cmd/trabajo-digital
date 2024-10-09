@@ -30,18 +30,72 @@ header {
 .logo {
     font-size: 28px;
     font-weight: bold;
+    color: #ffffff;
+}
+
+/* Menú móvil */
+nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background-color: #2A2A3A; /* Gris medio */
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav-list li a {
+    color: #ff6f20;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #ffd7a2;
+}
+
+nav.active {
+    max-height: 300px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul li {
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 nav ul li a {
+    padding: 10px;
     color: #FF1493; /* Rosa intenso para los enlaces */
     text-decoration: none;
     font-weight: bold;
@@ -50,6 +104,20 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #FFB6C1; /* Rosa claro al pasar el mouse */
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Rosa intenso para los iconos de menu */
+    margin: 5px auto;
+    transition: 0.3s;
 }
 
 /* Hero Section */
@@ -114,7 +182,6 @@ section {
 }
 
 /* Galería */
-/* Galería */
 .gallery {
     display: flex; /* Usamos flexbox para centrar las imágenes */
     justify-content: center; /* Centrar horizontalmente */
@@ -141,7 +208,6 @@ section {
     border-radius: 10px; /* Bordes redondeados para las imágenes */
 }
 
-/* Animación al pasar el mouse sobre los artículos */
 .gallery article:hover {
     transform: scale(1.05); /* Aumentar un poco el tamaño al pasar el mouse */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
@@ -181,10 +247,6 @@ footer .social-icons a:hover {
     color: #FFB6C1; /* Cambia a rosa claro al pasar el mouse */
 }
 
-footer .social-icons img {
-    width: 30px; /* Tamaño de los iconos */
-    height: 30px;
-}
 /* Formulario de contacto */
 form {
     background: #2A2A3A; /* Gris medio para el formulario */
@@ -226,22 +288,65 @@ form button:hover {
     background: #C71585; /* Rosa más oscuro al pasar el mouse */
 }
 
-/* Responsivo */
+/* Ajustes responsivos */
 @media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        height: 60px;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s ease;
+        padding: 20px;
+    }
+
+    .nav-list.open {
+        height: 200px; /* Altura cuando el menú está abierto */
+    }
+
+    .nav-list li {
+        margin: 15px 0; /* Espacio entre enlaces en móviles */
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostramos el botón hamburguesa en pantallas pequeñas */
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
     .services {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 
     .gallery {
-        grid-template-columns: repeat(1, 1fr); /* Una columna en pantallas pequeñas */
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
     }
 
     footer {
         flex-direction: column;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    form {
+        padding: 20px;
     }
 }
