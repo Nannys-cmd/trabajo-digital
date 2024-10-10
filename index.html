@@ -14,12 +14,13 @@
     <header>
         <div class="logo">Trabajo Digital</div>
         <nav>
-            <div class="menu-toggle" id="mobile-menu">
+            <!-- Cambiamos el div por un button para accesibilidad y mejor manejo -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
-            <ul class="nav-list">
+            </button>
+            <ul class="nav-list" id="nav-list">
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#galeria">Galería</a></li>
@@ -122,11 +123,11 @@
     </footer>
 
     <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navList = document.querySelector('.nav-list');
-    
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
         menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('active');
+            navList.classList.toggle('open');  // Añade una clase para abrir el menú
         });
     </script>
     
