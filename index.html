@@ -14,8 +14,7 @@
     <header>
         <div class="logo">Trabajo Digital</div>
         <nav>
-            <!-- Cambiamos el div por un button para accesibilidad y mejor manejo -->
-            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Menu">
+            <button class="menu-toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -28,7 +27,6 @@
             </ul>
         </nav>
     </header>
-
 
     <main>
         <section class="hero">
@@ -125,11 +123,12 @@
     <script>
         const menuToggle = document.getElementById('mobile-menu');
         const navList = document.getElementById('nav-list');
-
+    
         menuToggle.addEventListener('click', () => {
-            navList.classList.toggle('open');  // Añade una clase para abrir el menú
+            navList.classList.toggle('open');  // Añade la clase 'open' para mostrar el menú
         });
     </script>
+    
     
 </body>
 
